@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/backStude2"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/moringa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/account"
+        android:hint="Username/Email"
+        android:inputType="text"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <EditText
+        android:id="@+id/userpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/pass"
+        android:hint="Password"
+        android:layout_marginTop="15dp"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/moringaMid"
+        android:drawableRight="@drawable/open"
+        android:text="LOGIN"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/smoke"
+        app:layout_constraintTop_toBottomOf="@+id/userpass" />
+
+</android.support.constraint.ConstraintLayout>
