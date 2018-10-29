@@ -46,6 +46,7 @@ public class articleFragment extends Fragment {
         // Inflate the layout for this fragment
         View root= inflater.inflate(R.layout.fragment_article, container, false);
         ButterKnife.bind(this,root);
+        getArticles();
         return root;
     }
     private void getArticles() {
@@ -57,7 +58,7 @@ public class articleFragment extends Fragment {
 
         progress.show();
         // To dismiss the dialog
-        ArticlesService.getArticles(new Callback(){
+        ArticlesService.getArticle(new Callback(){
 
 
             @Override

@@ -9,6 +9,7 @@ import com.lawrence254.moringa.activities.models.Articles;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -24,7 +25,7 @@ import okhttp3.Response;
 
 public class ArticlesService {
     private static OkHttpClient client = new OkHttpClient();
-    public static void getArticles(Callback callback) {
+    public static void getArticle(Callback callback) {
         HttpUrl.Builder builder = HttpUrl.parse(Constants.ARTICLES_URL).newBuilder();
 
         String url = builder.build().toString();
@@ -39,18 +40,17 @@ public class ArticlesService {
     }
 
     public static ArrayList<Article> processArticles(Response response){
-        ArrayList<Article> news = new ArrayList<>();
+        ArrayList<Article> article = new ArrayList<>();
 
         try {
             String json = response.body().string();
 
             if (response.isSuccessful()){
-                JSONArray quotesJson = new JSONArray(json);
-                Type collectionType = new TypeToken<List<Articles>>() {}.getType();
-
+                JSONObject jsonObject = new JSONObject(json);
+                JSONArray newsJson = jsonObject.getJSONArray("articles");
+                Type collectionType = new TypeToken<List<Article>>() {}.getType();
                 Gson gson = new GsonBuilder().create();
-
-                news = gson.fromJson(quotesJson.toString(), collectionType);
+                article = gson.fromJson(newsJson.toString(), collectionType);
             }
 
         } catch (IOException e) {
@@ -59,6 +59,6 @@ public class ArticlesService {
             e.printStackTrace();
         }
 
-        return news;
+        return article;
     }
 }

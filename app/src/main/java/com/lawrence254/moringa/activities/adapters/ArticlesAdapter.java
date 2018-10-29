@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.lawrence254.moringa.R;
 import com.lawrence254.moringa.activities.models.Article;
-import com.lawrence254.moringa.activities.models.Articles;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -64,7 +63,7 @@ private ArrayList<Article> mArticles = new ArrayList<>();
                     .error(R.drawable.download)
                     .into(mArticlesImage);
             mHeadline.setText(article.getTitle());
-            mSource.setText(article.getId());
+//            mSource.setText(article.getId());
             mDescription.setText(article.getBody());
 
         }
