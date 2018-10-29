@@ -1,8 +1,6 @@
 package fragments;
 
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,10 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.lawrence254.moringa.R;
-import com.lawrence254.moringa.activities.adapters.ArticlesAdapter;
-import com.lawrence254.moringa.activities.models.Article;
-import com.lawrence254.moringa.activities.models.Articles;
-import com.lawrence254.moringa.activities.service.ArticlesService;
+import adapters.ArticlesAdapter;
+import models.Article;
+import service.ArticlesService;
 
 import java.io.IOException;
 import java.util.ArrayList;

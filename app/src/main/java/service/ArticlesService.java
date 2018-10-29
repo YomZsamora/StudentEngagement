@@ -1,11 +1,10 @@
-package com.lawrence254.moringa.activities.service;
+package service;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.lawrence254.moringa.activities.Constants;
-import com.lawrence254.moringa.activities.models.Article;
-import com.lawrence254.moringa.activities.models.Articles;
+import models.Article;
 
 import org.json.JSONArray;
 import org.json.JSONException;

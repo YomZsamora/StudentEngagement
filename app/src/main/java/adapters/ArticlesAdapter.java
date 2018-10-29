@@ -1,4 +1,4 @@
-package com.lawrence254.moringa.activities.adapters;
+package adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.lawrence254.moringa.R;
-import com.lawrence254.moringa.activities.models.Article;
+import models.Article;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
