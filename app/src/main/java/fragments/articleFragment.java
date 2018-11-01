@@ -54,7 +54,6 @@ public class articleFragment extends Fragment {
         final ArticlesService articlesSercice = new ArticlesService();
 
         progress.show();
-        // To dismiss the dialog
         ArticlesService.getArticle(new Callback(){
 
 
