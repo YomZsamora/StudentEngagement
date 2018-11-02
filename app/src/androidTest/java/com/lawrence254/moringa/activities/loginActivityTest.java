@@ -22,7 +22,6 @@ import static android.support.test.espresso.matcher.ViewMatchers.withInputType;
 import static org.junit.Assert.*;
 
 @RunWith(AndroidJUnit4.class)
-@SmallTest
 public class loginActivityTest {
     @Rule
     public ActivityTestRule<loginActivity> mActivityTestRule =
@@ -35,7 +34,7 @@ public class loginActivityTest {
     @Test
     public void login_to_home(){
 
-        onView(withId(R.id.login)).perform(click());
+        onView(withId(R.id.login)).perform(click(),closeSoftKeyboard());
 
         onView(withId(R.id.frame_container)).check(matches(isDisplayed()));
     }
