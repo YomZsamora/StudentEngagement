@@ -1,6 +1,7 @@
 package com.lawrence254.moringa.activities;
 
 import android.support.test.espresso.ViewAction;
+import android.support.test.filters.LargeTest;
 import android.support.test.filters.SmallTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
@@ -23,10 +24,11 @@ import static android.support.test.espresso.matcher.ViewMatchers.withInputType;
 import static org.junit.Assert.*;
 
 @RunWith(AndroidJUnit4.class)
+@LargeTest
 public class loginActivityTest {
     @Rule
     public ActivityTestRule<loginActivity> mActivityTestRule =
-            new ActivityTestRule<>(loginActivity.class,true,true);
+            new ActivityTestRule<>(loginActivity.class);
 
     private String username = "TestUser";
     private String correctPass = "Test123";
@@ -35,8 +37,8 @@ public class loginActivityTest {
     @Test
     public void login_to_home(){
 
-//        onView(withId(R.id.login)).perform(click(),closeSoftKeyboard());
+        onView(withId(R.id.login)).perform(closeSoftKeyboard());
 
-        onView(withId(R.id.login)).check(matches(isCompletelyDisplayed()));
+        onView(withId(R.id.login)).check(matches(isDisplayed()));
     }
 }
