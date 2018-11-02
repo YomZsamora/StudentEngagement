@@ -33,13 +33,13 @@ public class loginActivityTest {
     private String wrongPass = "test1234";
 
     @Test
-    public void correctLogin(){
+    public void login_to_home(){
 
-        onView(withId(R.id.username)).perform(click()).perform(typeText(username),closeSoftKeyboard());
-        onView(withId(R.id.userpass)).perform(click()).perform(typeText(correctPass),closeSoftKeyboard());
+//        onView(withId(R.id.username)).perform(click()).perform(typeText(username),closeSoftKeyboard());
+//        onView(withId(R.id.userpass)).perform(click()).perform(typeText(correctPass),closeSoftKeyboard());
 
         onView(withId(R.id.login)).perform(click());
 
-        onView(withId(R.id.articlesCard)).check(matches(isDisplayed()));
+        onView(withId(R.id.navigation)).check(matches(isDisplayed()));
     }
 }
