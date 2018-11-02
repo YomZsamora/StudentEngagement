@@ -16,6 +16,7 @@ import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.isCompletelyDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withInputType;
@@ -36,6 +37,6 @@ public class loginActivityTest {
 
         onView(withId(R.id.login)).perform(click(),closeSoftKeyboard());
 
-        onView(withId(R.id.frame_container)).check(matches(isDisplayed()));
+        onView(withId(R.id.frame_container)).check(matches(isCompletelyDisplayed()));
     }
 }
