@@ -35,8 +35,8 @@ public class loginActivityTest {
     @Test
     public void login_to_home(){
 
-        onView(withId(R.id.login)).perform(click(),closeSoftKeyboard());
+//        onView(withId(R.id.login)).perform(click(),closeSoftKeyboard());
 
-        onView(withId(R.id.frame_container)).check(matches(isCompletelyDisplayed()));
+        onView(withId(R.id.login)).check(matches(isCompletelyDisplayed()));
     }
 }
