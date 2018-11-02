@@ -26,7 +26,7 @@ import static org.junit.Assert.*;
 public class loginActivityTest {
     @Rule
     public ActivityTestRule<loginActivity> mActivityTestRule =
-            new ActivityTestRule<>(loginActivity.class);
+            new ActivityTestRule<>(loginActivity.class,true,true);
 
     private String username = "TestUser";
     private String correctPass = "Test123";
