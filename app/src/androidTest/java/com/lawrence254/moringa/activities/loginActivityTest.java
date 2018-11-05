@@ -1,6 +1,7 @@
 package com.lawrence254.moringa.activities;
 
 import android.support.test.espresso.ViewAction;
+import android.support.test.espresso.ViewInteraction;
 import android.support.test.filters.LargeTest;
 import android.support.test.filters.SmallTest;
 import android.support.test.rule.ActivityTestRule;
@@ -21,6 +22,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.isCompletelyDis
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withInputType;
+import static org.hamcrest.Matchers.allOf;
 import static org.junit.Assert.*;
 
 @RunWith(AndroidJUnit4.class)
@@ -38,14 +40,18 @@ public class loginActivityTest {
     public void loadLogin(){
 
         onView(withId(R.id.login)).perform(closeSoftKeyboard());
-
         onView(withId(R.id.login)).check(matches(isDisplayed()));
     }
 
     @Test
     public void load_home_page(){
-        onView(withId(R.id.login)).perform(closeSoftKeyboard());
-//        onView(withId(R.id.login)).perform(closeSoftKeyboard(),click());
-        onView(withId(R.id.login)).check(matches(isDisplayed()));
+        onView(withId(R.id.login)).perform(closeSoftKeyboard(),click());
+        ViewInteraction bottomNavigationItemView = onView(allOf(withId(R.id.article),withId(R.id.navigation)));
+        bottomNavigationItemView.perform(click());
+//        ViewInteraction bottomNavigationItemView = onView(
+//                allOf(withId(R.id.video),
+//                                        withId(R.id.navigation))),
+//                        isDisplayed();
+//        bottomNavigationItemView.perform(click());
     }
 }
