@@ -44,9 +44,9 @@ public class loginActivityTest {
         onView(withId(R.id.login)).check(matches(isDisplayed()));
     }
 
-    @Test
-    public void load_home_page(){
-        onView(withId(R.id.login)).perform(click());
-        onView(withId(R.id.navigation)).check(matches(isDisplayed()));
-    }
+//    @Test
+//    public void load_home_page(){
+//        onView(withId(R.id.login)).perform(click());
+//        onView(withId(R.id.navigation)).check(matches(isDisplayed()));
+//    }
 }
