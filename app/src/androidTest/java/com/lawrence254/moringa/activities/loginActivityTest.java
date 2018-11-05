@@ -22,6 +22,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.isCompletelyDis
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withInputType;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.junit.Assert.*;
 
@@ -45,13 +46,7 @@ public class loginActivityTest {
 
     @Test
     public void load_home_page(){
-        onView(withId(R.id.login)).perform(closeSoftKeyboard(),click());
-        ViewInteraction bottomNavigationItemView = onView(allOf(withId(R.id.article),withId(R.id.navigation)));
-        bottomNavigationItemView.perform(click());
-//        ViewInteraction bottomNavigationItemView = onView(
-//                allOf(withId(R.id.video),
-//                                        withId(R.id.navigation))),
-//                        isDisplayed();
-//        bottomNavigationItemView.perform(click());
+        onView(withId(R.id.login)).perform(click());
+        onView(withId(R.id.navigation)).check(matches(isDisplayed()));
     }
 }
