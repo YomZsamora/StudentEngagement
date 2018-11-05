@@ -43,7 +43,7 @@ public class articleFragment extends Fragment {
         // Inflate the layout for this fragment
         View root= inflater.inflate(R.layout.fragment_article, container, false);
         ButterKnife.bind(this,root);
-//        getArticles();
+        getArticles();
         return root;
     }
     private void getArticles() {
