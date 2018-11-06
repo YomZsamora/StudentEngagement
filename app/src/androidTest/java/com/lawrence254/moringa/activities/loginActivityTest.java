@@ -16,6 +16,7 @@ import org.junit.runner.RunWith;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
+import static android.support.test.espresso.action.ViewActions.scrollTo;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isCompletelyDisplayed;
@@ -46,7 +47,7 @@ public class loginActivityTest {
 
     @Test
     public void load_home_page(){
-        onView(withId(R.id.login)).perform(click());
+        onView(withId(R.id.login)).perform(scrollTo(),click());
         onView(withId(R.id.frame_container)).check(matches(isDisplayed()));
     }
 }
