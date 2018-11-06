@@ -47,13 +47,13 @@ public class articleFragment extends Fragment {
         return root;
     }
     private void getArticles() {
-        final ProgressDialog progress = new ProgressDialog(getContext());
-        progress.setTitle("Student Engagement");
-        progress.setMessage("Fetching Articles...");
-        progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
+//        final ProgressDialog progress = new ProgressDialog(getContext());
+//        progress.setTitle("Student Engagement");
+//        progress.setMessage("Fetching Articles...");
+//        progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
         final ArticlesService articlesSercice = new ArticlesService();
 
-        progress.show();
+//        progress.show();
         ArticlesService.getArticle(new Callback(){
 
 
@@ -64,7 +64,7 @@ public class articleFragment extends Fragment {
 
             @Override
             public void onResponse(Call call, Response response) {
-                progress.dismiss();
+//                progress.dismiss();
                 mArticles = articlesSercice.processArticles(response);
                 getActivity().runOnUiThread(new Runnable() {
 
