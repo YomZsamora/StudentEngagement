@@ -46,7 +46,7 @@ public class loginActivityTest {
 
     @Test
     public void load_home_page(){
-//        onView(withId(R.id.login)).perform(click());
+        onView(withId(R.id.login)).perform(click());
         onView(withId(R.id.frame_container)).check(matches(isDisplayed()));
     }
 }
