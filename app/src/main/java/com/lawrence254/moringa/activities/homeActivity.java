@@ -23,14 +23,17 @@ import fragments.videoFragment;
 public class homeActivity extends AppCompatActivity {
 
     @BindView(R.id.navigation) BottomNavigationView bottomNavigationView;
-
+    private ActionBar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
 
+        toolbar = getSupportActionBar();
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        toolbar.setTitle("Articles");
         loadFragment(new articleFragment());
 
     }
@@ -41,14 +44,17 @@ public class homeActivity extends AppCompatActivity {
             Fragment fragment;
             switch (item.getItemId()){
                 case R.id.article:
+                    toolbar.setTitle("Articles");
                     fragment = new articleFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.video:
+                    toolbar.setTitle("Videos");
                     fragment = new videoFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.profile:
+                    toolbar.setTitle("Profile");
                     fragment = new profileFragment();
                     loadFragment(fragment);
                     return true;

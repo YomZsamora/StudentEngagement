@@ -1,6 +1,7 @@
 package adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 
 import com.lawrence254.moringa.R;
 import models.Article;
+
+import com.lawrence254.moringa.activities.ArticleDetailsActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -53,10 +56,23 @@ private ArrayList<Article> mArticles = new ArrayList<>();
 
         public ArticlesViewHolder(View itemView){
             super(itemView);
+
             ButterKnife.bind(this,itemView);
             mContext = itemView.getContext();
         }
         public void bindArticles(Article article){
+            final String art = article.getTitle();
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent intent=new Intent(mContext, ArticleDetailsActivity.class);
+                    intent.putExtra("art",art);
+                    mContext. startActivity(intent);
+                }
+            });
+
             Picasso.get()
                     .load(article.getImageUrl())
                     .placeholder(R.drawable.moringa)

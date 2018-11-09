@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ArticleDetailsActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:elevation="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/blured" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSource"
+        android:background="@color/lightBlue"
+        android:text="Moringa School"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:textColor="@color/smoke"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvHeadline"
+        app:layout_constraintTop_toBottomOf="@+id/tvSource"
+        android:textSize="18sp"
+        android:padding="3dp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:text="This is a major Heading for the article"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/favicon"
+        android:padding="5dp"
+        android:drawableLeft="@drawable/cards_heart"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeadline"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvlikes"
+        android:textSize="15sp"
+        android:padding="5dp"
+        android:text="200"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeadline"
+        app:layout_constraintLeft_toRightOf="@+id/favicon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/commenticon"
+        android:padding="5dp"
+        android:drawableLeft="@drawable/message_text"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeadline"
+        app:layout_constraintLeft_toRightOf="@+id/tvlikes"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvComments"
+        android:textSize="15sp"
+        android:padding="5dp"
+        android:text="1.3K"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeadline"
+        app:layout_constraintLeft_toRightOf="@+id/commenticon"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvContent"
+        android:textSize="12sp"
+        android:text="Sample test"
+        app:layout_constraintTop_toBottomOf="@+id/tvlikes"
+        android:padding="5dp"/>
+</android.support.constraint.ConstraintLayout>
