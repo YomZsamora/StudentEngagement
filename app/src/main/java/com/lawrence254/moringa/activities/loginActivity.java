@@ -15,7 +15,7 @@ import butterknife.ButterKnife;
 
 public class loginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @BindView(R.id.login) Button loginButton;
+    @BindView(R.id.loginButton) Button loginButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
