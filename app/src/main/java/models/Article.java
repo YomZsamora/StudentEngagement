@@ -11,12 +11,24 @@ public class Article {
     @SerializedName("id")
     @Expose
     private Integer id;
+    @SerializedName("author")
+    @Expose
+    private String author;
+    @SerializedName("tag")
+    @Expose
+    private String tag;
+    @SerializedName("source")
+    @Expose
+    private String source;
     @SerializedName("title")
     @Expose
     private String title;
-    @SerializedName("body")
+    @SerializedName("description")
     @Expose
-    private String body;
+    private String description;
+    @SerializedName("url")
+    @Expose
+    private String url;
     @SerializedName("imageUrl")
     @Expose
     private String imageUrl;
@@ -37,21 +49,62 @@ public class Article {
         this.id = id;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     public String getTitle() {
         return title;
+
     }
 
     public void setTitle(String title) {
         this.title = title;
     }
 
-    public String getBody() {
-        return body;
-    }
-
-    public void setBody(String body) {
-        this.body = body;
-    }
+//    public String getdescription() {
+//        return description;
+//    }
+//
+//    public void setdescription(String description) {
+//        this.description = description;
+//    }
 
     public String getImageUrl() {
         return imageUrl;

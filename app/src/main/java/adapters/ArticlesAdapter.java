@@ -61,7 +61,7 @@ private ArrayList<Article> mArticles = new ArrayList<>();
             mContext = itemView.getContext();
         }
         public void bindArticles(Article article){
-            final String art = article.getTitle();
+            final String art = article.getUrl();
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -73,14 +73,17 @@ private ArrayList<Article> mArticles = new ArrayList<>();
                 }
             });
 
+            String head = article.getTag() +", "+article.getTitle();
+
             Picasso.get()
                     .load(article.getImageUrl())
                     .placeholder(R.drawable.moringa)
                     .error(R.drawable.download)
                     .into(mArticlesImage);
-            mHeadline.setText(article.getTitle());
-//            mSource.setText(article.getId());
-            mDescription.setText(article.getBody());
+            mHeadline.setText(head);
+            mSource.setText(article.getSource());
+
+            mDescription.setText(article.getDescription());
 
         }
     }
