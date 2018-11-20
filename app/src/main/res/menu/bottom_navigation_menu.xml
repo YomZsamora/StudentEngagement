@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_home"
+        android:title="Home"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_videos"
+        android:title="Videos"
+        android:enabled="true"
+        android:icon="@drawable/video_outline"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_favorites"
+        android:title="Favorites"
+        android:enabled="true"
+        android:icon="@drawable/heart"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_search"
+        android:title="Search"
+        android:enabled="true"
+        android:icon="@drawable/magnify"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_library"
+        android:title="Library"
+        android:enabled="true"
+        android:icon="@drawable/folder"
+        app:showAsAction="ifRoom" />
+
+</menu>

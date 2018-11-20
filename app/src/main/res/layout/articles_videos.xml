@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp"
+    android:id="@+id/video_articles">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/youtubeImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/youtubeTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato_black"
+        android:maxLines="1"
+        android:text="Title Goes Here"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/youtubeImageView"
+        tools:layout_editor_absoluteX="26dp" />
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/youtubeTitleTextView"
+        android:layout_below="@+id/youtubeTitleTextView"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato_regular"
+        android:maxLines="3"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/youtubeTitleTextView"
+        tools:layout_editor_absoluteX="26dp" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvUrlTextView"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignStart="@+id/youtubeTitleTextView"-->
+    <!--android:layout_below="@+id/descriptionTextView"-->
+    <!--android:text="TextView" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/idTextView"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignStart="@+id/youtubeTitleTextView"-->
+    <!--android:layout_below="@+id/tvUrlTextView"-->
+    <!--android:text="TextView" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/youtubeVideo"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignStart="@+id/youtubeTitleTextView"-->
+    <!--android:layout_below="@+id/idTextView"-->
+    <!--android:text="View Video" />-->
+
+</android.support.constraint.ConstraintLayout>
