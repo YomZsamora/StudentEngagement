@@ -1,4 +1,4 @@
-package com.adzumi.studentengagement.ui;
+package com.lawrence254.moringa.activities;
 
 import android.annotation.SuppressLint;
 import android.support.design.internal.BottomNavigationItemView;

@@ -3,6 +3,8 @@
     package="com.lawrence254.moringa">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
     <application
         android:allowBackup="true"
@@ -14,14 +16,14 @@
         <activity android:name=".activities.MainActivity" />
         <activity
             android:name=".activities.loginActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".activities.homeActivity"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activities.ArticleDetailsActivity"
-            android:parentActivityName=".activities.homeActivity"></activity>
+            android:parentActivityName=".activities.homeActivity" />
         <activity
             android:name=".activities.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -31,6 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.VideoArticlesActivity"></activity>
     </application>
 
 </manifest>

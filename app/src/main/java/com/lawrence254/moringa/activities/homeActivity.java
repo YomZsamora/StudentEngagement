@@ -55,7 +55,7 @@ public class homeActivity extends AppCompatActivity {
                         finish();
                         break;
                     case R.id.action_videos:
-                        Intent events = new Intent(homeActivity.this, homeActivity.class);
+                        Intent events = new Intent(homeActivity.this, VideoArticlesActivity.class);
                         startActivity(events);
                         finish();
                         break;
@@ -73,7 +73,7 @@ public class homeActivity extends AppCompatActivity {
                 return false;
             }
         });
-        com.adzumi.studentengagement.ui.BottomNavigationViewHelper.disableShiftMode(mBottom_navigation);
+        com.lawrence254.moringa.activities.BottomNavigationViewHelper.disableShiftMode(mBottom_navigation);
 
     }
 
@@ -85,30 +85,7 @@ public class homeActivity extends AppCompatActivity {
         return true;
     }
 
-//    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-//        @Override
-//        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//            Fragment fragment;
-//            switch (item.getItemId()){
-//                case R.id.article:
-//                    toolbar.setTitle("Articles");
-//                    fragment = new articleFragment();
-//                    loadFragment(fragment);
-//                    return true;
-//                case R.id.video:
-//                    toolbar.setTitle("Videos");
-//                    fragment = new videoFragment();
-//                    loadFragment(fragment);
-//                    return true;
-//                case R.id.profile:
-//                    toolbar.setTitle("Profile");
-//                    fragment = new profileFragment();
-//                    loadFragment(fragment);
-//                    return true;
-//            }
-//            return false;
-//        }
-//    };
+
 
     private void loadFragment(Fragment fragment) {
 //        Load the fragments
