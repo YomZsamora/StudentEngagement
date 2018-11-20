@@ -18,7 +18,7 @@ import service.AppController;
 
 public class CustomListAdapter extends BaseAdapter {
     Activity activity;
-    ImageLoader imageLoader = AppController.getInstance().getImageLoader();
+//    ImageLoader imageLoader = AppController.getInstance().getImageLoader();
     private LayoutInflater inflater;
     ArrayList<VideoDetails> singletons;
 
@@ -47,9 +47,9 @@ public class CustomListAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = this.inflater.inflate(R.layout.articles_videos, null);
         }
-        if (this.imageLoader == null) {
-            this.imageLoader = AppController.getInstance().getImageLoader();
-        }
+//        if (this.imageLoader == null) {
+//            this.imageLoader = AppController.getInstance().getImageLoader();
+//        }
         NetworkImageView networkImageView = (NetworkImageView) convertView.findViewById(R.id.youtubeImageView);
         final TextView imgtitle = (TextView) convertView.findViewById(R.id.youtubeTitleTextView);
         final TextView imgdesc = (TextView) convertView.findViewById(R.id.descriptionTextView);
@@ -67,7 +67,7 @@ public class CustomListAdapter extends BaseAdapter {
 //        });
 
         VideoDetails singleton = (VideoDetails) this.singletons.get(i);
-        networkImageView.setImageUrl(singleton.getURL(), this.imageLoader);
+//        networkImageView.setImageUrl(singleton.getURL(), this.imageLoader);
 //        tvVideoID.setText(singleton.getVideoId());
         imgtitle.setText(singleton.getVideoName());
         imgdesc.setText(singleton.getVideoDesc());
