@@ -71,12 +71,18 @@
         android:text="1.3K"
         app:layout_constraintTop_toBottomOf="@+id/tvHeadline"
         app:layout_constraintLeft_toRightOf="@+id/commenticon"/>
-    <TextView
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/tvContent"-->
+        <!--android:textSize="12sp"-->
+        <!--android:text="Sample test"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/tvlikes"-->
+        <!--android:padding="5dp"/>-->
+    <WebView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tvContent"
-        android:textSize="12sp"
-        android:text="Sample test"
+        android:id="@+id/webV"
         app:layout_constraintTop_toBottomOf="@+id/tvlikes"
-        android:padding="5dp"/>
+        android:layout_margin="5dp"/>
 </android.support.constraint.ConstraintLayout>
