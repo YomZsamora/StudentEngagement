@@ -29,10 +29,10 @@ import static org.junit.Assert.*;
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest
-public class loginActivityTest {
+public class firebaseLoginActivityTest {
     @Rule
-    public ActivityTestRule<loginActivity> mActivityTestRule =
-            new ActivityTestRule<>(loginActivity.class);
+    public ActivityTestRule<firebaseLoginActivity> mActivityTestRule =
+            new ActivityTestRule<>(firebaseLoginActivity.class);
 
     private String username = "TestUser";
     private String correctPass = "Test123";

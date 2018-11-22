@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activities.MainActivity" />
         <activity
-            android:name=".activities.loginActivity"
+            android:name=".activities.firebaseLoginActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".activities.homeActivity"

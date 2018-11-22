@@ -9,7 +9,7 @@ import static android.support.test.espresso.Espresso.onView;
 
 import com.lawrence254.moringa.R;
 import com.lawrence254.moringa.activities.homeActivity;
-import com.lawrence254.moringa.activities.loginActivity;
+import com.lawrence254.moringa.activities.firebaseLoginActivity;
 
 import org.junit.Before;
 import org.junit.Rule;

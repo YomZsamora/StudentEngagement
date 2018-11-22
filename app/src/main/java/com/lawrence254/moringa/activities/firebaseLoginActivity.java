@@ -22,9 +22,9 @@ import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import interfaces.AuthenticationInterfaceTry;
+import interfaces.AuthenticationInterface;
 
-public class loginActivity extends AppCompatActivity implements View.OnClickListener, AuthenticationInterfaceTry {
+public class firebaseLoginActivity extends AppCompatActivity implements View.OnClickListener, AuthenticationInterface {
 
     private FirebaseAuth fAuth;
     @BindView(R.id.loginButton) Button loginButton;
@@ -78,10 +78,10 @@ public class loginActivity extends AppCompatActivity implements View.OnClickList
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
-                            Intent intent = new Intent(loginActivity.this,homeActivity.class);
+                            Intent intent = new Intent(firebaseLoginActivity.this,homeActivity.class);
                             startActivity(intent);
                         }else {
-                            Toast.makeText(loginActivity.this, "Authentication Failed, Please Try again or create account", Toast.LENGTH_LONG).show();
+                            Toast.makeText(firebaseLoginActivity.this, "Authentication Failed, Please Try again or create account", Toast.LENGTH_LONG).show();
                         }
                     }
                 }
