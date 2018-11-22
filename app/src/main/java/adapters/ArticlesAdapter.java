@@ -52,6 +52,10 @@ private ArrayList<Article> mArticles = new ArrayList<>();
         @BindView(R.id.headline)TextView mHeadline;
         @BindView(R.id.description) TextView mDescription;
         @BindView(R.id.txtSource)TextView mSource;
+        @BindView(R.id.tvTag)TextView mTag;
+        @BindView(R.id.tvDate)TextView mDate;
+        @BindView(R.id.tvComment)TextView mComment;
+        @BindView(R.id.tvlike) TextView mLike;
         private Context mContext;
 
         public ArticlesViewHolder(View itemView){
@@ -73,16 +77,17 @@ private ArrayList<Article> mArticles = new ArrayList<>();
                 }
             });
 
-            String head = article.getTag() +", "+article.getTitle();
-
             Picasso.get()
                     .load(article.getImageUrl())
                     .placeholder(R.drawable.moringa)
                     .error(R.drawable.download)
                     .into(mArticlesImage);
-            mHeadline.setText(head);
+            mHeadline.setText(article.getTitle());
             mSource.setText(article.getSource());
-
+            mTag.setText(article.getTag());
+            mDate.setText(article.getDate());
+            mComment.setText(String.valueOf(article.getComments()));
+            mLike.setText(String.valueOf(article.getLikes()));
             mDescription.setText(article.getDescription());
 
         }

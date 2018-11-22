@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 27
@@ -63,4 +64,5 @@ dependencies {
         exclude group: 'org.apache.httpcomponents'
     }
     implementation 'com.mcxiaoke.volley:library:1.0.19'
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
 }
