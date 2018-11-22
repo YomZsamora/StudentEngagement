@@ -18,6 +18,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.lawrence254.moringa.R;
 
+import java.util.Objects;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import interfaces.AuthenticationInterfaceTry;
@@ -55,14 +57,15 @@ public class loginActivity extends AppCompatActivity implements View.OnClickList
 
             String email = mEmail.getText().toString();
             String pass = mPass.getText().toString();
-            if (email.equals(null)||pass.equals(null)){
-                Toast.makeText(this, "All Fields Must Be Filled", Toast.LENGTH_SHORT).show();
+            if (Objects.equals(email, "") && Objects.equals(pass, "")){
+                Toast.makeText(this, "All Fields Must Be Filled", Toast.LENGTH_LONG).show();
             }
-            else if (email.equals(null)){
-                Toast.makeText(this, "Email is required", Toast.LENGTH_SHORT).show();
-            }else if (pass.equals(null)){
-                Toast.makeText(this, "A password is required", Toast.LENGTH_SHORT).show();
-
+            else if (Objects.equals(email, "")){
+                Toast.makeText(this, "Email is required", Toast.LENGTH_LONG).show();
+            }else if (Objects.equals(pass, "")) {
+                Toast.makeText(this, "A password is required", Toast.LENGTH_LONG).show();
+            }
+            else{
                 login(email,pass);
             }
     }
