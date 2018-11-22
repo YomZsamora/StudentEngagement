@@ -105,7 +105,7 @@
                 android:layout_height="20dp"
                 android:layout_marginBottom="4dp"
                 android:layout_marginStart="4dp"
-                android:src="@drawable/heart"
+                android:src="@drawable/heart_outline"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tvComment" />
 

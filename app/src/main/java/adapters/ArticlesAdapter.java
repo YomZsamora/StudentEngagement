@@ -66,6 +66,8 @@ private ArrayList<Article> mArticles = new ArrayList<>();
         }
         public void bindArticles(Article article){
             final String art = article.getUrl();
+            String author = article.getAuthor();
+
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -76,7 +78,6 @@ private ArrayList<Article> mArticles = new ArrayList<>();
                     mContext. startActivity(intent);
                 }
             });
-
             Picasso.get()
                     .load(article.getImageUrl())
                     .placeholder(R.drawable.moringa)
