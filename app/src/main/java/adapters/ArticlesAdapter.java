@@ -72,14 +72,14 @@ private ArrayList<Article> mArticles = new ArrayList<>();
         public void bindArticles(Article article){
             final String art = article.getUrl();
             String author = article.getAuthor();
-//TODO: Solve issue with saving whole response. Need to save only selected item
+//TODO: Solve issue with saving whole response. Need to save only selected item:
             like.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     SharedPreferences sharedPref =mContext.getSharedPreferences("ARTICLES",Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPref.edit();
                     Gson gson = new Gson();
-                    String article = gson.toJson(mArticles);
+                    String article = gson.toJson(mArticles.get(getAdapterPosition()));
                     Log.e("SHAREDPREF", "STORED ITEM: "+article);
                     editor.putString("Article",article);
                     editor.commit();
