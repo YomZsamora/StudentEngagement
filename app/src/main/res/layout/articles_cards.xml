@@ -148,7 +148,7 @@
                 android:text="44"
                 android:textSize="11sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imLikes" />
+                app:layout_constraintStart_toEndOf="@id/imLikes" />
 
         </android.support.constraint.ConstraintLayout>
 

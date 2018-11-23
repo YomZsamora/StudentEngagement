@@ -31,7 +31,8 @@ import okhttp3.Response;
 
 public class articleFragment extends Fragment implements View.OnClickListener {
     @BindView(R.id.articleRecycler)RecyclerView mRecyclerView;
-    @BindView(R.id.imLikes)ImageView mLike;
+//    @BindView(R.id.imLikes)ImageView mLike;
+    ImageView mLike;
     private ArticlesAdapter mAdapter;
     public ArrayList<Article> mArticles = new ArrayList<>();
 
@@ -51,9 +52,7 @@ public class articleFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View root= inflater.inflate(R.layout.fragment_article, container, false);
         ButterKnife.bind(this,root);
-
-        mLike.setOnClickListener(this);
-
+        mLike = root.findViewById(R.id.imLikes);
         getArticles();
         return root;
     }
@@ -76,6 +75,7 @@ public class articleFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onResponse(Call call, Response response) {
                 progress.dismiss();
+
                 mArticles = articlesSercice.processArticles(response);
                 getActivity().runOnUiThread(new Runnable() {
 
@@ -97,13 +97,13 @@ public class articleFragment extends Fragment implements View.OnClickListener {
 //  Try to save a favourited item into shared preferences as an arraylist in order to save everything. Might fail spectacularly!!!!.
     @Override
     public void onClick(View v) {
-        SharedPreferences sharedPref = Objects.requireNonNull(getActivity()).getPreferences(Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        Gson gson = new Gson();
-        String article = gson.toJson(mArticles);
-        Log.e("SHAREDPREF", "STORED ITEM: "+article);
-        editor.putString("Article",article);
-        editor.commit();
-        mLike.setImageResource(R.drawable.heart);
+//        SharedPreferences sharedPref = Objects.requireNonNull(getActivity()).getPreferences(Context.MODE_PRIVATE);
+//        SharedPreferences.Editor editor = sharedPref.edit();
+//        Gson gson = new Gson();
+//        String article = gson.toJson(mArticles);
+//        Log.e("SHAREDPREF", "STORED ITEM: "+article);
+//        editor.putString("Article",article);
+//        editor.commit();
+//        mLike.setImageResource(R.drawable.heart);
     }
 }
