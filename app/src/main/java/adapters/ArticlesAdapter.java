@@ -4,8 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
+import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +32,7 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.Articl
 
 private ArrayList<Article> mArticles = new ArrayList<>();
     private Context mContext;
+    private GestureDetectorCompat mGDetector;
 
     public ArticlesAdapter(Context context, ArrayList<Article> article){
         mContext = context;
@@ -67,6 +70,7 @@ private ArrayList<Article> mArticles = new ArrayList<>();
             super(itemView);
 
             ButterKnife.bind(this,itemView);
+            mGDetector = new GestureDetectorCompat(this,this);
             mContext = itemView.getContext();
         }
         public void bindArticles(Article article){
@@ -76,14 +80,18 @@ private ArrayList<Article> mArticles = new ArrayList<>();
             like.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    SharedPreferences sharedPref =mContext.getSharedPreferences("ARTICLES",Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPref.edit();
-                    Gson gson = new Gson();
-                    String article = gson.toJson(mArticles.get(getAdapterPosition()));
-                    Log.e("SHAREDPREF", "STORED ITEM: "+article);
-                    editor.putString("Article",article);
-                    editor.commit();
-                    like.setImageResource(R.drawable.heart);
+                    if (){
+
+                    }else {
+                        SharedPreferences sharedPref = mContext.getSharedPreferences("ARTICLES", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPref.edit();
+                        Gson gson = new Gson();
+                        String article = gson.toJson(mArticles.get(getAdapterPosition()));
+                        Log.e("SHAREDPREF", "STORED ITEM: " + article);
+                        editor.putString("Article", article);
+                        editor.commit();
+                        like.setImageResource(R.drawable.heart);
+                    }
                 }
             });
 

@@ -29,7 +29,7 @@ import static org.junit.Assert.*;
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest
-public class firebaseLoginActivityTest {
+public class loginActivityTest {
     @Rule
     public ActivityTestRule<firebaseLoginActivity> mActivityTestRule =
             new ActivityTestRule<>(firebaseLoginActivity.class);
@@ -41,8 +41,8 @@ public class firebaseLoginActivityTest {
     @Test
     public void loadLogin(){
 
-        onView(withId(R.id.login)).perform(closeSoftKeyboard());
-        onView(withId(R.id.login)).check(matches(isDisplayed()));
+        onView(withId(R.id.emailEditText)).perform(closeSoftKeyboard());
+        onView(withId(R.id.loginButton)).check(matches(isDisplayed()));
     }
 
 //    @Test
