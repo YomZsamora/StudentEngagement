@@ -62,7 +62,8 @@ public class firebaseLoginActivity extends AppCompatActivity implements View.OnC
             }
             else if (Objects.equals(email, "")){
                 Toast.makeText(this, "Email is required", Toast.LENGTH_LONG).show();
-            }else if (Objects.equals(pass, "")) {
+            }
+            else if (Objects.equals(pass, "")) {
                 Toast.makeText(this, "A password is required", Toast.LENGTH_LONG).show();
             }
             else{

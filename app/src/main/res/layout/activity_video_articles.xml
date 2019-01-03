@@ -26,15 +26,6 @@
         android:layout_marginBottom="14dp"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/anton_regular"
-            android:paddingLeft="20dp"
-            android:text="Video Articles"
-            android:textColor="@color/colorPrimaryLight"
-            android:textSize="35sp" />
-
         <ListView
             android:id="@+id/videoList"
             android:layout_width="wrap_content"
